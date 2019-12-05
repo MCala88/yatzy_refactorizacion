@@ -54,3 +54,6 @@ def test_pair_dos():
 
 def test_pair():
     assert 2 == Yatzy.checkRepeatedNumber(1, (1, 1, 2, 3, 4))
+
+def test_pair_dos():
+    assert 4 == Yatzy.checkRepeatedNumber(2, (2, 3, 2, 5, 6))

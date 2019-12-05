@@ -1,5 +1,10 @@
 class Yatzy:
-
+    ONE = 1
+    TWO = 2
+    THREE = 3
+    FOUR = 4
+    FIVE = 5
+    SIX = 6
     @staticmethod
     def chance(*dados):
         total = 0
@@ -20,56 +25,26 @@ class Yatzy:
         total = 0
         for numero in listaDados:
             if numero == numeroDado:
-                total += 1
+                total += numeroDado
         return total
 
 
     @staticmethod
     def ones(*dados):
-        total = Yatzy.checkRepeatedNumber(1, dados)
+        total = Yatzy.checkRepeatedNumber(Yatzy.ONE, dados)
+        return total
+
+    @staticmethod
+    def twos(*dados):
+        total = Yatzy.checkRepeatedNumber(Yatzy.TWO, dados)
+        return total
+
+    @staticmethod
+    def threes(*dados):
+        total = Yatzy.checkRepeatedNumber(Yatzy.THREE, dados)
         return total
     
-
-    @staticmethod
-    def twos( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 2):
-             sum += 2
-        if (d2 == 2):
-             sum += 2
-        if (d3 == 2):
-             sum += 2
-        if (d4 == 2):
-             sum += 2
-        if (d5 == 2):
-             sum += 2
-        return sum
-    
-    @staticmethod
-    def threes( d1,  d2,  d3,  d4,  d5):
-        s = 0
-        if (d1 == 3):
-             s += 3
-        if (d2 == 3):
-             s += 3
-        if (d3 == 3):
-             s += 3
-        if (d4 == 3):
-             s += 3
-        if (d5 == 3):
-             s += 3
-        return s
-    
-
-    def __init__(self, d1, d2, d3, d4, _5):
-        self.dice = [0]*5
-        self.dice[0] = d1
-        self.dice[1] = d2
-        self.dice[2] = d3
-        self.dice[3] = d4
-        self.dice[4] = _5
-    
-    def fours(self):
+        def fours(self):
         sum = 0
         for at in range(5):
             if (self.dice[at] == 4): 
@@ -92,6 +67,7 @@ class Yatzy:
             if (self.dice[at] == 6):
                 sum = sum + 6
         return sum
+
     
     @staticmethod
     def score_pair( d1,  d2,  d3,  d4,  d5):
