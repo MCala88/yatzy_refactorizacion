@@ -50,3 +50,7 @@ def test_pair_uno():
 
 def test_pair_dos():
     assert 8 == Yatzy.score_pair(3, 3, 3, 4, 4)
+
+
+def test_pair():
+    assert 2 == Yatzy.checkRepeatedNumber(1, (1, 1, 2, 3, 4))
